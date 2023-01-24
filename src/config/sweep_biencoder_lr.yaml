@@ -1,0 +1,120 @@
+program: src/tasks/contrastive_training.py
+name: tuning_biencoder_lr
+project: dsr_BERT-HierBERT
+#-------------------#
+#  SEARCH STRATEGY  #
+#-------------------#
+method: bayes
+metric:
+  name: val_recall@200
+  goal: maximize
+  target: 0.90
+early_terminate:
+  type: hyperband
+  min_iter: 3
+  eta: 2 #Checks after epochs [3, 6, 12] if current should be terminated (based on metric performance).
+#-------------------#
+#  HYPERPARAMETERS  #
+#-------------------#
+parameters:
+  # (A) Input/output paths
+  # ----------------------
+  documents_path:
+    value: bsard_v1/articles_fr.csv
+  train_queries_path:
+    value: bsard_v1/questions_fr_train.csv
+  val_queries_path:
+    value: bsard_v1/questions_fr_dev.csv
+  test_queries_path:
+    value: bsard_v1/questions_fr_test.csv
+  synthetic_queries_path:
+    value: None
+  hard_negatives_path:
+    value: output/data/hard_negatives/bm25_negatives_original_queries.json
+  logs_path:
+    value: output/training/biencoder/logs/
+  checkpoints_path:
+    value: output/training/biencoder/checkpoints/
+  # (B) Biencoder parameters
+  # ------------------------
+  q_model_name_or_path:
+    value: camembert-base
+  d_model_name_or_path:
+    value: output/training/legalbert-fr/checkpoint-last
+  max_chunk_length:
+    value: 128
+  max_document_length:
+    value: 1024
+  pooling_mode:
+    value: max
+  add_doc_title:
+    value: false
+  # (C) Graph network parameters
+  # ----------------------------
+  biencoder_ckpt:
+    value: output/training/biencoder/checkpoints/2022-10-05_03-31_DSR-CamemBERT-15e-linear/best_epoch-8_step-1700_val_recall200-0.81.ckpt/best.ckpt
+  num_gnn_layers:
+    value: 0
+  gnn_layer_name:
+    value: None
+  nodes_path:
+    value: None
+  edges_path:
+    value: None
+  node_vectors_path:
+    value: None
+  # (D) Training parameters
+  # -----------------------
+  do_train:
+    value: true
+  ratio_train_set_to_use:
+    value: 1.0
+  module_to_train:
+    value: biencoder
+  loss_config:
+    parameters:
+      type:
+        value: cross_entropy
+      temp:
+        value: 0.01
+      metric:
+        value: cos
+  train_batch_size:
+    value: 24
+  epochs:
+    value: 5
+  lr:
+    min: 0.0000001
+    max: 0.0001
+  scheduler:
+    value: constant
+  warmup_ratio:
+    value: 0.05
+  weight_decay:
+    value: 0.01
+  gradient_clip_val:
+    value: 1.0
+  accumulate_grad_batches:
+    value: 1
+  fp16:
+    value: true
+  deepspeed:
+    value: true
+  deepspeed_config_path:
+    value: src/config/ds_zero2.json
+  seed:
+    value: 42
+  # (E) Other parameters
+  # --------------------
+  do_val:
+    value: true
+  do_test:
+    value: false
+  eval_batch_size:
+    value: 512
+  num_workers:
+    value: 4
+  find_lr:
+    value: false
+  save_ckpt:
+    value: false

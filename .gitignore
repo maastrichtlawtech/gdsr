@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# MacOS
+.DS_Store
+
+# VSCode
+.vscode
+
+# Temporary/backup files
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+*.xlk
+*.bkp
+
+# Data
+*.tsv
+*.pdf
+*.zip
+*.gz
+bsard_v1/
+
+# Logging files.
+wandb/
+runs/
+lightning_logs/
+events.out.tfevents.*
+
+# Checkpoints.
+output/
+checkpoints/
+embeddings/
+*.pkl
+core.*
+*.ckpt 
+*.pt
+
+# Confidential.
+*credentials.json

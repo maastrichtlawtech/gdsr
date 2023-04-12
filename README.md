@@ -1,10 +1,10 @@
 <img src="docs/img/icon.png" width=125 height=125 align="right">
 
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/license-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![Loader: Hugging Face Datasets](https://img.shields.io/static/v1.svg?label=loader&message=🤗%20datasets&color=FF9900)](https://huggingface.co/datasets/maastrichtlawtech/bsard)
 
 # Graph-augmented Dense Statute Retriever
 
-This repository contains the code for reproducing the experimental results presented in the EACL 2023 paper "[Finding the Law: Enhancing Statutory Article Retrieval via Graph Neural Networks](https://arxiv.org/abs/2301.12847)" by [Antoine Louis](https:/antoinelouis.co/work/), [Gijs van Dijck](https://www.maastrichtuniversity.nl/gijs.vandijck) and [Jerry Spanakis](https://dke.maastrichtuniversity.nl/jerry.spanakis/).
+This repository contains the code for reproducing the experimental results presented in the EACL 2023 paper ["Finding the Law: Enhancing Statutory Article Retrieval via Graph Neural Networks"](https://arxiv.org/abs/2301.12847) by [Antoine Louis](https:/antoinelouis.co/work/), [Gijs van Dijck](https://www.maastrichtuniversity.nl/gijs.vandijck) and [Jerry Spanakis](https://dke.maastrichtuniversity.nl/jerry.spanakis/).
 
 <p align="center"><img src="docs/img/cover.png" width="800"></p>
 
@@ -34,4 +34,4 @@ For attribution in academic contexts, please cite this work as:
 
 ## License
 
-This repository is licensed under the terms of the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
+This repository is MIT-licensed.

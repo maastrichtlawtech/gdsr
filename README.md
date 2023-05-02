@@ -4,7 +4,7 @@
 
 # Graph-augmented Dense Statute Retriever
 
-This repository contains the code for reproducing the experimental results presented in the EACL 2023 paper ["Finding the Law: Enhancing Statutory Article Retrieval via Graph Neural Networks"](https://arxiv.org/abs/2301.12847) by [Antoine Louis](https:/antoinelouis.co/work/), [Gijs van Dijck](https://www.maastrichtuniversity.nl/gijs.vandijck) and [Jerry Spanakis](https://dke.maastrichtuniversity.nl/jerry.spanakis/).
+This repository contains the code for reproducing the experimental results presented in the EACL 2023 paper ["Finding the Law: Enhancing Statutory Article Retrieval via Graph Neural Networks"](https://aclanthology.org/2023.eacl-main.203/) by [Antoine Louis](https:/antoinelouis.co/work/), [Gijs van Dijck](https://www.maastrichtuniversity.nl/gijs.vandijck) and [Jerry Spanakis](https://dke.maastrichtuniversity.nl/jerry.spanakis/).
 
 <p align="center"><img src="docs/img/cover.png" width="800"></p>
 
@@ -27,8 +27,8 @@ For attribution in academic contexts, please cite this work as:
   year = {2023},
   address = {Dubrovnik, Croatia},
   publisher = {Association for Computational Linguistics},
-  url = {},
-  pages = {},
+  url = {https://aclanthology.org/2023.eacl-main.203/},
+  pages = {2753–2768},
 }
 ```
 

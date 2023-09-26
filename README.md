@@ -1,6 +1,9 @@
 <img src="docs/img/icon.png" width=125 height=125 align="right">
 
-[![Loader: Hugging Face Datasets](https://img.shields.io/static/v1.svg?label=loader&message=🤗%20datasets&color=FF9900)](https://huggingface.co/datasets/maastrichtlawtech/bsard)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python: 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![arXiv](https://img.shields.io/badge/arXiv-2301.12847-b31b1b.svg?style=plastic)](https://arxiv.org/abs/2301.12847)
+[![Loader: Hugging Face Datasets](https://img.shields.io/static/v1.svg?label=🤗%20Datasets&message=BSARD&color=FF9900)](https://huggingface.co/datasets/maastrichtlawtech/bsard)
 
 # Graph-augmented Dense Statute Retriever
 
